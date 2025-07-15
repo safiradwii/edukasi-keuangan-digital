@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tips Keamanan Aset Digital - EduFin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .security-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        .security-card:hover {
+            transform: translateY(-5px);
+            border-left-color: #3b82f6;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation (Sesuaikan dengan index.html) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-coins text-blue-500 text-2xl"></i>
+                <span class="text-xl font-bold text-blue-600">EduFin</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="aset-digital.html" class="text-gray-600 hover:text-blue-600">Aset Digital</a>
+                <a href="tips.html" class="text-blue-600 font-medium">Tips Aman</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
+                <i class="fas fa-shield-alt mr-2"></i> Tips Keamanan Aset Digital
+            </h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Lindungi investasi Anda dari penipuan dan serangan siber dengan panduan ini.
+            </p>
+        </div>
+
+        <!-- Section 1: 5 Tips Penting -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">
+                <i class="fas fa-check-circle mr-2"></i> 5 Praktik Keamanan Wajib
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tip 1 -->
+                <div class="security-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-key text-blue-600"></i>
+                        </div>
+                        <h3 class="font-bold text-lg">Gunakan 2FA</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Aktifkan <strong>Two-Factor Authentication</strong> di semua akun crypto Anda (Google Authenticator/Authy).
+                    </p>
+                </div>
+
+                <!-- Tip 2 -->
+                <div class="security-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-purple-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-wallet text-purple-600"></i>
+                        </div>
+                        <h3 class="font-bold text-lg">Hard Wallet</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Simpan aset besar di <strong>hardware wallet</strong> (Ledger/Trezor) bukan di exchange.
+                    </p>
+                </div>
+
+                <!-- Tip 3 -->
+                <div class="security-card bg-white rounded-lg shadow-md p-6">
+                    <div class="flex items-center mb-3">
+                        <div class="bg-red-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-link-slash text-red-600"></i>
+                        </div>
+                        <h3 class="font-bold text-lg">Hindari Phishing</h3>
+                    </div>
+                    <p class="text-gray-600">
+                        Jangan klik link mencurigakan. Selalu cek URL website sebelum login.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: FAQ Keamanan -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">
+                <i class="fas fa-question-circle mr-2"></i> Pertanyaan Umum
+            </h2>
+            
+            <!-- Accordion Item 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                <button class="accordion-toggle w-full flex justify-between items-center p-6 text-left">
+                    <h3 class="font-semibold text-lg">Bagaimana mengenali email phishing?</h3>
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content px-6 pb-6">
+                    <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                        <li>Periksa pengirim: Email palsu sering pakai domain mirip (contoh: <code>@binance-support.com</code>)</li>
+                        <li>Waspada permintaan darurat ("Akun Anda akan dibekukan!")</li>
+                        <li>Jangan download attachment mencurigakan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Accordion Item 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden mb-4">
+                <button class="accordion-toggle w-full flex justify-between items-center p-6 text-left">
+                    <h3 class="font-semibold text-lg">Apa itu private key dan bagaimana menyimpannya?</h3>
+                    <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                </button>
+                <div class="accordion-content px-6 pb-6">
+                    <p class="text-gray-600 mb-3">
+                        <strong>Private key</strong> adalah kunci rahasia untuk mengakses aset crypto. Simpan dengan:
+                    </p>
+                    <ol class="list-decimal pl-5 text-gray-600 space-y-2">
+                        <li>Tulis di kertas (tanpa menyimpan foto/digital)</li>
+                        <li>Gunakan metal crypto wallet untuk proteksi fisik</li>
+                        <li>Jangan bagikan ke siapapun!</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Tools Rekomendasi -->
+        <section>
+            <h2 class="text-2xl font-bold mb-6 text-blue-600">
+                <i class="fas fa-tools mr-2"></i> Tools Keamanan
+            </h2>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6 md:p-8">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Tool 1 -->
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-lock text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Bitwarden</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Password manager open-source untuk menyimpan kredensial dengan aman.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Tool 2 -->
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Ledger Nano X</h3>
+                                <p class="text-gray-600 text-sm">
+                                    Hardware wallet terbaik untuk menyimpan aset crypto offline.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 p-4 border-t border-gray-200">
+                    <p class="text-sm text-blue-800">
+                        <i class="fas fa-info-circle mr-2"></i> <strong>Catatan</strong>: Tools di atas bukan promosi, tapi benar kami gunakan sehari-hari.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 EduFin. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Accordion Functionality
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const isOpen = button.classList.contains('active');
+
+                // Close all others
+                document.querySelectorAll('.accordion-toggle').forEach(item => {
+                    if (item !== button) {
+                        item.classList.remove('active');
+                        item.querySelector('i').classList.remove('rotate-180');
+                        item.nextElementSibling.style.maxHeight = null;
+                    }
+                });
+
+                // Toggle current
+                if (!isOpen) {
+                    button.classList.add('active');
+                    button.querySelector('i').classList.add('rotate-180');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    button.classList.remove('active');
+                    button.querySelector('i').classList.remove('rotate-180');
+                    content.style.maxHeight = null;
+                }
+            });
+        });
+
+        // Auto-expand first FAQ item
+        document.querySelector('.accordion-toggle')?.classList.add('active');
+        document.querySelector('.accordion-content')?.style.maxHeight = 
+            document.querySelector('.accordion-content')?.scrollHeight + 'px';
+    </script>
+</body>
+</html>

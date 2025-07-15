@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Edukasi keuangan digital tentang aset kripto, blockchain, dan keamanan transaksi digital">
+    <meta property="og:title" content="EduFin - Edukasi Keuangan Digital">
+    <title>Edukasi Keuangan Digital</title>
+    
+    <!-- Preload Resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Styles */
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .active-nav::after {
+            width: 100%;
+        }
+        .contact-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #3b82f6;
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-toggle.active .fa-chevron-down {
+            transform: rotate(180deg);
+        }
+        @media (max-width: 768px) {
+            .hero-content {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50" aria-label="Main navigation">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2" aria-label="EduFin Home">
+                <i class="fas fa-coins text-blue-500 text-2xl" aria-hidden="true"></i>
+                <span class="text-xl font-bold text-blue-600">EduFin</span>
+            </a>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                <span class="sr-only">Open menu</span>
+            </button>
+            
+            <!-- Desktop menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link active-nav text-blue-600 font-medium py-2">Home</a>
+                <a href="aset-digital.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium py-2">Aset Digital</a>
+                <a href="tips.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium py-2">Tips Aman</a>
+                <a href="kontak.html" class="nav-link text-gray-600 hover:text-blue-600 font-medium py-2">Kontak</a>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="index.html" class="block py-2 text-blue-600 font-medium">Home</a>
+            <a href="aset-digital.html" class="block py-2 text-gray-600 hover:text-blue-600">Aset Digital</a>
+            <a href="tips.html" class="block py-2 text-gray-600 hover:text-blue-600">Tips Aman</a>
+            <a href="kontak.html" class="block py-2 text-gray-600 hover:text-blue-600">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24 hero-content">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Edukasi Keuangan Digital untuk Semua</h1>
+                <p class="text-xl mb-8 opacity-90">Pelajari tentang aset digital, kripto, dan cara bertransaksi aman di era finansial modern.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="aset-digital.html" class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg text-center transition duration-300">
+                        Mulai Belajar <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                    </a>
+                    <a href="tips.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-6 rounded-lg text-center transition duration-300">
+                        Tips Keamanan
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="ilustrasi.png" 
+                     alt="Ilustrasi Keuangan Digital" 
+                     class="rounded-xl shadow-2xl w-full max-w-md"
+                     width="800"
+                     height="533"
+                     loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Apa yang Akan Anda Pelajari</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl transition duration-300 card-hover">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bitcoin-sign text-blue-600 text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Aset Digital & Kripto</h3>
+                    <p class="text-gray-600">Pahami dasar-dasar aset digital, blockchain, dan bagaimana kripto bekerja dalam sistem keuangan modern.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl transition duration-300 card-hover">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-purple-600 text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Keamanan Digital</h3>
+                    <p class="text-gray-600">Pelajari cara melindungi aset digital Anda dari penipuan, phishing, dan serangan siber lainnya.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl transition duration-300 card-hover">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-green-600 text-2xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Investasi Bijak</h3>
+                    <p class="text-gray-600">Temukan strategi investasi yang tepat untuk aset digital dengan manajemen risiko yang baik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold mb-6">Tentang EduFin</h2>
+                    <p class="text-gray-600 mb-6">EduFin adalah platform edukasi keuangan digital yang bertujuan untuk memberikan pemahaman mendasar tentang aset digital, kripto, dan praktik keamanan dalam bertransaksi di era digital.</p>
+                    <p class="text-gray-600 mb-6">Kami percaya bahwa literasi keuangan digital adalah hak semua orang. Dengan pengetahuan yang tepat, setiap individu dapat mengambil keputusan finansial yang lebih baik.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-blue-100 px-4 py-2 rounded-lg">
+                            <p class="text-blue-800 font-medium"><i class="fas fa-check-circle mr-2" aria-hidden="true"></i> Materi Terpercaya</p>
+                        </div>
+                        <div class="bg-purple-100 px-4 py-2 rounded-lg">
+                            <p class="text-purple-800 font-medium"><i class="fas fa-check-circle mr-2" aria-hidden="true"></i> Update Terkini</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-6 rounded-xl shadow-lg">
+                        <h3 class="text-xl font-semibold mb-4">Statistik Keuangan Digital</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Pengguna Dompet Kripto</span>
+                                    <span class="text-sm font-medium text-blue-600">300jt+</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Nilai Pasar Kripto</span>
+                                    <span class="text-sm font-medium text-purple-600">$1.2T+</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-purple-600 h-2.5 rounded-full" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Transaksi Harian</span>
+                                    <span class="text-sm font-medium text-green-600">5jt+</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-green-600 h-2.5 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 mt-4">*Data perkiraan tahun 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Pertanyaan Umum</h2>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">Apa itu aset digital?</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-gray-600">Aset digital adalah representasi elektronik dari nilai yang dapat diperdagangkan atau ditransfer dalam bentuk digital, termasuk cryptocurrency, token, dan aset virtual lainnya.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-medium">Bagaimana cara memulai investasi kripto?</h3>
+                        <i class="fas fa-chevron-down transition-transform duration-300" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-content mt-4">
+                        <p class="text-gray-600">Mulailah dengan mempelajari dasar-dasar blockchain, pilih exchange terpercaya, mulai dengan modal kecil, dan selalu lakukan diversifikasi portofolio Anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Apa Kata Mereka</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl border-l-4 border-blue-500 shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Testimonial Sarah Wijaya" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                        <div>
+                            <h4 class="font-semibold">Sarah Wijaya</h4>
+                            <p class="text-sm text-gray-500">Freelancer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"EduFin membantu saya memahami dasar-dasar kripto dengan sangat jelas. Sekarang saya bisa berinvestasi dengan lebih percaya diri."</p>
+                    <div class="flex mt-3 text-yellow-400">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl border-l-4 border-purple-500 shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Testimonial Budi Santoso" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                        <div>
+                            <h4 class="font-semibold">Budi Santoso</h4>
+                            <p class="text-sm text-gray-500">Pengusaha</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Materi tentang keamanan digital sangat bermanfaat. Sekarang saya lebih waspada terhadap berbagai jenis penipuan online."</p>
+                    <div class="flex mt-3 text-yellow-400">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star-half-alt" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl border-l-4 border-green-500 shadow">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Testimonial Dewi Kartini" class="w-12 h-12 rounded-full mr-4" loading="lazy">
+                        <div>
+                            <h4 class="font-semibold">Dewi Kartini</h4>
+                            <p class="text-sm text-gray-500">Mahasiswa</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Sebagai mahasiswa ekonomi, materi di EduFin sangat relevan dengan perkembangan terkini. Penyajiannya mudah dipahami."</p>
+                    <div class="flex mt-3 text-yellow-400">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="far fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Siap Memulai Perjalanan Keuangan Digital Anda?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto opacity-90">Bergabunglah dengan ribuan orang yang telah meningkatkan literasi keuangan digital mereka bersama kami.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="aset-digital.html" class="bg-white text-blue-600 hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center">
+                    Mulai Belajar Sekarang <i class="fas fa-arrow-right ml-2" aria-hidden="true"></i>
+                </a>
+                <a href="kontak.html" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition duration-300 inline-flex items-center justify-center">
+                    Hubungi Kami <i class="fas fa-envelope ml-2" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-coins text-blue-400 mr-2" aria-hidden="true"></i> EduFin
+                    </h3>
+                    <p class="text-gray-400">Platform edukasi keuangan digital untuk membantu masyarakat memahami dan mengelola aset digital dengan aman.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Facebook">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Twitter">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="Instagram">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="aset-digital.html" class="text-gray-400 hover:text-white transition duration-300">Aset Digital</a></li>
+                        <li><a href="tips.html" class="text-gray-400 hover:text-white transition duration-300">Tips Aman</a></li>
+                        <li><a href="kontak.html" class="text-gray-400 hover:text-white transition duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Sumber Belajar</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Glosarium</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Artikel</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Infografis</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Berlangganan</h3>
+                    <p class="text-gray-400 mb-4">Dapatkan update materi terbaru langsung ke email Anda.</p>
+                    <form id="newsletter-form" class="flex">
+                        <input 
+                            type="email" 
+                            placeholder="Alamat Email" 
+                            required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            class="bg-gray-800 text-white px-4 py-2 rounded-l-lg focus:outline-none w-full contact-input">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-lg transition duration-300">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                            <span class="sr-only">Subscribe</span>
+                        </button>
+                    </form>
+                    <p id="form-error" class="text-red-400 text-sm mt-2 hidden"></p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© <span id="current-year">2023</span> EduFin. All rights reserved.</p>
+                <div class="flex flex-wrap gap-x-6 gap-y-2 justify-center">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Kebijakan Privasi</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Syarat & Ketentuan</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition duration-300">Peta Situs</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "EduFin",
+      "description": "Platform edukasi keuangan digital tentang aset kripto, blockchain, dan keamanan transaksi digital",
+      "url": "https://edufin.example.com",
+      "logo": "https://edufin.example.com/logo.png",
+      "sameAs": [
+        "https://facebook.com/edufin",
+        "https://twitter.com/edufin",
+        "https://instagram.com/edufin"
+      ]
+    }
+    </script>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Set active nav link based on current page
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const linkHref = link.getAttribute('href');
+            if (linkHref === currentPage) {
+                link.classList.add('active-nav');
+                link.classList.remove('text-gray-600');
+                link.classList.add('text-blue-600');
+            } else {
+                link.classList.remove('active-nav');
+            }
+        });
+        
+        // FAQ Accordion
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const isOpen = content.style.maxHeight;
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-content').forEach(item => {
+                    if (item !== content) {
+                        item.style.maxHeight = null;
+                        item.previousElementSibling.classList.remove('active');
+                        item.previousElementSibling.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                    }
+                });
+                
+                // Toggle current FAQ
+                if (isOpen) {
+                    content.style.maxHeight = null;
+                    toggle.classList.remove('active');
+                    toggle.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                } else {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    toggle.classList.add('active');
+                    toggle.querySelector('.fa-chevron-down').classList.add('rotate-180');
+                }
+            });
+        });
+        
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Form validation
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const emailInput = newsletterForm.querySelector('input[type="email"]');
+                const errorElement = document.getElementById('form-error');
+                
+                if (!emailInput.validity.valid) {
+                    errorElement.textContent = 'Masukkan alamat email yang valid';
+                    errorElement.classList.remove('hidden');
+                } else {
+                    errorElement.classList.add('hidden');
+                    // Here you would typically send the data to your server
+                    alert('Terima kasih telah berlangganan!');
+                    newsletterForm.reset();
+                }
+            });
+        }
+        
+        // Button loading states
+        document.querySelectorAll('a[href^="aset-digital"], a[href^="tips"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Memuat...';
+                btn.disabled = true;
+                
+                // Reset after 3 seconds for demo purposes
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
