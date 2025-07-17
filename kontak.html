@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - EduFin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .email-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid #3b82f6;
+        }
+        .email-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation (Sesuaikan dengan index.html) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <i class="fas fa-coins text-blue-500 text-2xl"></i>
+                <span class="text-xl font-bold text-blue-600">EduFin</span>
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600">Home</a>
+                <a href="aset-digital.html" class="text-gray-600 hover:text-blue-600">Aset Digital</a>
+                <a href="tips.html" class="text-gray-600 hover:text-blue-600">Tips Aman</a>
+                <a href="kontak.html" class="text-blue-600 font-medium">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="container mx-auto px-4 py-12 max-w-2xl">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
+                <i class="fas fa-envelope mr-2"></i> Hubungi Kami
+            </h1>
+            <p class="text-lg text-gray-600">
+                Silakan kirim pertanyaan Anda via email di bawah ini.
+            </p>
+        </div>
+
+        <!-- Email Card -->
+        <div class="email-card bg-white rounded-lg shadow-md p-8 text-center">
+            <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-envelope-open-text text-blue-600 text-2xl"></i>
+            </div>
+            <h2 class="text-xl font-semibold mb-2">Email Resmi EduFin</h2>
+            <a href="mailto:edufin.support@example.com" 
+               class="text-blue-600 hover:text-blue-800 text-xl font-medium break-all">
+               edufin.support@example.com
+            </a>
+            <p class="text-gray-500 mt-4 text-sm">
+                <i class="fas fa-clock mr-1"></i> Respon dalam 1-2 hari kerja
+            </p>
+        </div>
+
+        <!-- Info Tambahan -->
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>
+                <i class="fas fa-exclamation-circle mr-1"></i> Mohon hindari mengirim informasi sensitif via email.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 EduFin. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
